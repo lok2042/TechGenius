@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - TechGenius</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="shortcut icon" href="../assets/atom.png" type="image/x-icon" />
+    <script defer src="../scripts/submit_contact_form.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="../assets/company.png" alt="TechGenius's logo" />
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="gadgets.html">Gadgets</a></li>
+          <li><a href="product-review.html">Reviews</a></li>
+          <li><a href="product-purchase.html">Purchase</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Contact Us</h1>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="first-name">First Name:</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            maxlength="25"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name:</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            maxlength="25"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]+" required />
+        </div>
+
+        <div class="form-group">
+          <label for="query">Query/Feedback:</label>
+          <textarea id="query" name="query" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <button id="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 TechGenius. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

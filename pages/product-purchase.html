@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase - TechGenius</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="shortcut icon" href="../assets/atom.png" type="image/x-icon" />
+    <script defer src="../scripts/handle_purchase.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="../assets/company.png" alt="TechGenius's logo" />
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="gadgets.html">Gadgets</a></li>
+          <li><a href="product-review.html">Reviews</a></li>
+          <li><a href="product-purchase.html">Purchase</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Purchase</h1>
+      <form id="purchase-form">
+        <div class="form-group">
+          <label for="product-select">Select Product:</label>
+          <select id="product-select" required>
+            <option value="">-- Select Product --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" min="0" required />
+        </div>
+        <div class="form-group">
+          <label for="discount">Discount (%):</label>
+          <input
+            type="number"
+            value="0"
+            id="discount"
+            min="0"
+            max="100"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="total-cost">Total Purchase Cost:</label>
+          <input type="text" id="total-cost" readonly />
+        </div>
+        <div class="form-buttons">
+          <button type="button" id="calculate-button">Calculate</button>
+          <button type="button" id="reset-button">Reset</button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 TechGenius. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
